@@ -9,8 +9,23 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
+
 function isValid(name) {
-  // ваш код...
+  let nameCheck = true;
+
+  // Проверить, что имя содержит больше 4 символов
+  if (name.length < 4) {
+    nameCheck = false;
+    return nameCheck;
+  } else {
+    // Проверить, что символы не содержат пробел
+    for (let char of name) {
+      if (char === ' ') {
+        nameCheck = false;
+      }
+    }
+  }
+  return nameCheck;
 }
 
 function sayHello() {
