@@ -4,5 +4,10 @@
  * @returns {number}
  */
 function factorial(n) {
-  // ваш код...
+  // Решение скопипащено с хабра. В тестах надо добавлять проверку на infinity при n >170
+  let result = 1;
+  while (n) {
+    result *= n--;
+  }
+  return result;
 }
