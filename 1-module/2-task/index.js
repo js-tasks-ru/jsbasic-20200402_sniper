@@ -11,22 +11,10 @@ function print(text) {
  */
 
 function isValid(name) {
-  let nameCheck = true;
-
-  // Проверить, что имя содержит больше 4 символов
-  if (name.length < 4) {
-    nameCheck = false;
-    return nameCheck;
-  } else {
-    // Проверить, что символы не содержат пробел
-    for (let char of name) {
-      if (char === ' ') {
-        nameCheck = false;
-      }
-    }
-  }
-  return nameCheck;
+  return !(name.length < 4 || name.includes(' '));
 }
+
+
 
 function sayHello() {
   const userName = prompt('Введите ваше имя');
