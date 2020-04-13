@@ -4,5 +4,10 @@
  * @returns {Boolean}
  */
 function isEmpty(obj) {
-  // ваш код...
+  let check = true;
+  for (let prop in obj) {
+    if (typeof (obj[prop]) === 'undefined' || typeof (obj[prop]) !== '' ) {return false;}
+  }
+  return check;
 }
+
