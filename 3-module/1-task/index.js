@@ -3,5 +3,10 @@
  * @returns {string[]}  объект
  */
 function namify(users) {
-  // ваш код...
+  let namifyArray = [];
+
+  for (let props in users) {
+    namifyArray.push(users[props].name);
+  }
+  return namifyArray;
 }

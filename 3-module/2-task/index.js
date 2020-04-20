@@ -5,5 +5,9 @@
  * @returns {number[]}
  */
 function filterRange(arr, a, b) {
-  // ваш код...
+  let arrayFiltered = [];
+  arr.forEach(function(item, index, arr) {
+    if (arr[item] >= a || arr[item] <= b) { arrayFiltered.unshift(arr[item]); }
+  });
+  return arrayFiltered;
 }
