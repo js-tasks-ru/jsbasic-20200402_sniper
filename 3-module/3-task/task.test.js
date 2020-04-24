@@ -1,4 +1,4 @@
-fdescribe('3-module-3-task', () => {
+describe('3-module-3-task', () => {
   it('должна оставить пустую строку без изменений ', () => {
     expect(camelize('')).toBe('');
   });
@@ -13,8 +13,5 @@ fdescribe('3-module-3-task', () => {
 
   it('должна преобразовать \'-webkit-transition\'', () => {
     expect(camelize('-webkit-transition')).toBe('WebkitTransition');
-  });
-  it('должна преобразовать \'--webkit-transition\'', () => {
-    expect(camelize('-webkit-transition')).toBe('-WebkitTransition');
   });
 });
