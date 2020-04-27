@@ -5,5 +5,10 @@
  * @returns {string}
  */
 function showSalary(data, age) {
-  // ваш код...
+  let salary = '';
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].age <= age) { salary = salary + data[i].name + ', ' + data[i].balance + '\n'; }
+  }
+  salary = salary.trim();
+  return salary;
 }
